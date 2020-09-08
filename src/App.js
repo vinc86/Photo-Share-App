@@ -8,8 +8,10 @@ import Modal from '@material-ui/core/Modal';
 import { Button, Input } from '@material-ui/core';
 import ImageUpload from './components/ImageUpload';
 import Stories from './components/Stories';
+const dotenv = require("dotenv");
+dotenv.config();
 
-
+console.log(process.env)
 //modal functions
 
 function getModalStyle() {
