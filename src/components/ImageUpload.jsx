@@ -1,14 +1,21 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import { storage, db } from "../firebase";
 import firebase from "firebase";
 import "../styles/ImageUpload.css";
 
-export default function ImageUpload({username}) {
+export default function ImageUpload(props) {
 
+    console.log(props)
     const [caption , setCaption] = useState("");
     const [image, setImage] = useState(null);
     const [progress, setProgress] = useState(0);
     const [url, setUrl] = useState("");
+
+
+
+     /*    useEffect(()=>{
+            console.log(username)
+        },[username]) */
 
     const handleChange =(e)=>{
         if(e.target.files[0]){
@@ -43,7 +50,7 @@ export default function ImageUpload({username}) {
                         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
                         caption: caption,
                         image: url,
-                        username: username 
+                        /* username: username  */
                     })
                     
                     // reset upload fields
@@ -54,7 +61,7 @@ export default function ImageUpload({username}) {
             }
         )
     }
-    console.log(username)
+    
     return (
         <div className="upload-container">
             <input type="file" onChange={handleChange}/>

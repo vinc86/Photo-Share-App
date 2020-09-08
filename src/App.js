@@ -8,10 +8,7 @@ import Modal from '@material-ui/core/Modal';
 import { Button, Input } from '@material-ui/core';
 import ImageUpload from './components/ImageUpload';
 import Stories from './components/Stories';
-const dotenv = require("dotenv");
-dotenv.config();
 
-console.log(process.env)
 //modal functions
 
 function getModalStyle() {
@@ -106,8 +103,11 @@ function App() {
     const logIn=(e)=>{
       e.preventDefault();
       auth.signInWithEmailAndPassword(email, password)
+      .then((authUser)=>{
+        console.log(authUser)
+        return authUser.user.updateProfile({displayName: username})
+      })
       .catch((error)=>alert(error.message))
-      
       setOpenSignIn(false);
     }
 
