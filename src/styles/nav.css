@@ -1,0 +1,64 @@
+.navigation {
+    display: flex;
+    align-items: center;
+    transition: all 0.6s ease;
+    width: 360px;
+    position: absolute;
+    right: 0px;
+    border-bottom: 1px solid #ccc;
+}
+
+.close {
+    transform: translateX(calc(100% - 50px))
+}
+
+.line {
+    background: rgb(34, 29, 56);
+    height: 3px;
+    align-self: flex-end;
+}
+
+.one {
+    width: 20px;
+}
+
+.two {
+    width: 35px;
+}
+
+.three {
+    width: 25px;
+}
+
+.menu-burger {
+    width: 50px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    right: 7px;
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: calc(100% - 50px);
+    background: rgb(34, 29, 56);
+    height: 60px;
+}
+
+li {
+    list-style-type: none;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 90px;
+    cursor: "pointer";
+}
+
+a {
+    color: #fff;
+}

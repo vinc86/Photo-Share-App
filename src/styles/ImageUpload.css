@@ -1,0 +1,26 @@
+.modalButton {
+    background: rgb(34, 29, 56);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 7px 25px;
+    cursor: pointer;
+}
+
+.caption {
+    border: none;
+    border-bottom: 1px solid rgb(34, 29, 56);
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #ccc;
+    justify-content: space-evenly;
+    margin: 100px auto;
+    padding: 20px;
+}
